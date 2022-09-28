@@ -73,7 +73,6 @@ function player_collision()
 
 function player_falling()
 {
-    return
     var nb_tile = 10;
     var sizeOfTileX = WIDTH / nb_tile;
     var sizeOfTileY = HEIGHT / nb_tile;
@@ -100,6 +99,8 @@ function player_falling()
             && (y < mtileY))
         {
            player1.dead();
+           console.log("Player one is dead")
+           break;
         }
     }
 
