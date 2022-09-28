@@ -15,4 +15,14 @@ function update()
 
     player1.move();
     controls.update();
+
+    var x = player_ennemy.graphic.position.x + WIDTH / 2;
+
+    if (x < 0)
+        player_ennemy.turnLeft(Math.PI)
+    if ( x > WIDTH )
+        player_ennemy.turnLeft(Math.PI)
+
+    player_ennemy.accelerate(moveDistance)
+    player_ennemy.move();
 }
